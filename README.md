@@ -35,7 +35,7 @@ python_googler
 ##Windows版
 "我要上Google"的Windows版可去官方网站下载：
 
-    http://www.brieftools.info/software/googler/
+[http://www.brieftools.info/software/googler/](http://www.brieftools.info/software/googler/)
 
 
 ##鸣谢
