@@ -1,6 +1,9 @@
 #coding=utf-8
 import os;
 import urllib;
+import sys;
+
+
 def update():
 	print("downloading newest hosts...........");
 	html=urllib.urlopen("https://raw.githubusercontent.com/autonews/python_googler/master/hosts").read().decode("utf-8");
@@ -8,6 +11,7 @@ def update():
 	hosts.write(html);
 	hosts.close();
 	print("download complete...........");
+
 
 	
 def hasBackup():
@@ -17,6 +21,13 @@ def backup():
 	bak=open("hosts_bak","w");
 	for line in origin:
 		bak.write(line);
+	origin.close();
+	bak.close();
+def recover():
+	origin=open("/etc/hosts","w");
+	bak=open("hosts_bak","r");
+	for line in bak:
+		origin.write(line);
 	origin.close();
 	bak.close();
 
@@ -39,12 +50,27 @@ def write():
 	origin.close();
 	hosts.close();
 	bak.close();
-update();
-if not hasBackup():
-	print "begin backup.................";
-	backup();
-else:
-	print "no need to backup............";
 
-print "begin write.......................";
-write();
+
+
+def install():
+	update();
+	if not hasBackup():
+		print "begin backup.................";
+		backup();
+	else:
+		print "no need to backup............";
+	print "begin write.......................";
+	write();
+	print "install complete";
+
+if len(sys.argv)>1:
+	cmd=sys.argv[1];
+	if cmd=="recover":
+		recover();
+	elif cmd=="backup":
+		backup();
+	else:
+		print("illegal cmd:"+cmd);
+else:
+	install();
