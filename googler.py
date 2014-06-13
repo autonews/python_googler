@@ -24,6 +24,9 @@ def backup():
 	origin.close();
 	bak.close();
 def recover():
+	if not os.path.isfile("hosts_bak"):
+		print("no need to recover");
+		return;
 	print "start recover..........";
 	origin=open("/etc/hosts","w");
 	bak=open("hosts_bak","r");
@@ -31,6 +34,7 @@ def recover():
 		origin.write(line);
 	origin.close();
 	bak.close();
+	os.remove("hosts_bak");
 	print "recover complete";
 
 def write():
