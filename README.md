@@ -9,6 +9,7 @@ python_googler
 
 ##运行方式：
 1.下载：
+
 方法一：点击右侧的"Download ZIP"进行下载,解压。
 
 方法二：在装有git的电脑上，可使用命令下载
@@ -23,4 +24,10 @@ python_googler
 如果要恢复系统配置,执行
     
     sudo python googler.py recover
+
+3.更新:
+如果要更新hosts，直接运行
+
+    sudo python googler.py
+
 

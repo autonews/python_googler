@@ -24,12 +24,14 @@ def backup():
 	origin.close();
 	bak.close();
 def recover():
+	print "start recover..........";
 	origin=open("/etc/hosts","w");
 	bak=open("hosts_bak","r");
 	for line in bak:
 		origin.write(line);
 	origin.close();
 	bak.close();
+	print "recover complete";
 
 def write():
 	origin=open("/etc/hosts","w");
