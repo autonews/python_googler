@@ -32,6 +32,11 @@ python_googler
 
     sudo python googler.py
 
+##Windows版
+"我要上Google"的Windows版可去官方网站下载：
+
+    http://www.brieftools.info/software/googler/
+
 
 ##鸣谢
 本软件的hosts大部分来源于smarthosts
