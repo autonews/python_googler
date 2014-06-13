@@ -2,7 +2,9 @@ python_googler
 ==============
 ##我要上Google Linux 1.1版
 
-我要上google的python版，可在大多数linux上运行,也可在MAC上运行
+我要上google的python版，可在大多数linux上运行,也可在MAC上运行。
+
+官方网站:[http://www.brieftools.info/software/googler/](http://www.brieftools.info/software/googler/)
 
 ##运行环境：
 可在配有python 2+的linux/MAC系统上运行。大多数linux都自带python 2+ 。
