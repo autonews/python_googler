@@ -1,5 +1,15 @@
 #coding=utf-8
 import os;
+import urllib;
+def update():
+	print("downloading newest hosts...........");
+	html=urllib.urlopen("https://raw.githubusercontent.com/autonews/python_googler/master/hosts").read().decode("utf-8");
+	hosts=open("hosts","w");
+	hosts.write(html);
+	hosts.close();
+	print("download complete...........");
+
+	
 def hasBackup():
 	return os.path.isfile("hosts_bak");
 def backup():
@@ -29,7 +39,7 @@ def write():
 	origin.close();
 	hosts.close();
 	bak.close();
-
+update();
 if not hasBackup():
 	print "begin backup.................";
 	backup();
