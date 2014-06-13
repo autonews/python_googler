@@ -9,9 +9,9 @@ python_googler
 
 ##运行方式：
 1.下载：
->方法一：点击右侧的"Download ZIP"进行下载,解压。
+方法一：点击右侧的"Download ZIP"进行下载,解压。
 
->方法二：在装有git的电脑上，可使用命令下载
+方法二：在装有git的电脑上，可使用命令下载
     
     git clone https://github.com/autonews/python_googler
 
