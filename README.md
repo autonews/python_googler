@@ -31,3 +31,5 @@ python_googler
     sudo python googler.py
 
 
+##鸣谢
+本软件的hosts大部分来源于smarthosts
